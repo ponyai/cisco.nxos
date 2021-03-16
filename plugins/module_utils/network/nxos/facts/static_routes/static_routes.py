@@ -219,7 +219,8 @@ class Static_routesFacts(object):
         global_dest_list = []
         if con:
             for conf in con:
-                # Current nxos module does not support static bfd, skip
+                # Current nxos module does not support "ip route static bfd" commands
+                # rendering, skip
                 if conf.startswith("ip route static bfd"):
                     continue
                 if conf.startswith("vrf context"):
