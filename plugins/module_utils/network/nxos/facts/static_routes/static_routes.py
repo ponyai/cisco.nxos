@@ -219,7 +219,7 @@ class Static_routesFacts(object):
         global_dest_list = []
         if con:
             for conf in con:
-                # ip route static bfd is not supported yet, skip
+                # ip route static bfd is not supported yet, skip render
                 if conf.startswith("ip route static bfd"):
                     continue
                 if conf.startswith("vrf context"):
