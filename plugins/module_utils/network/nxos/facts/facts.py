@@ -76,6 +76,15 @@ from ansible_collections.cisco.nxos.plugins.module_utils.network.nxos.facts.ospf
 from ansible_collections.cisco.nxos.plugins.module_utils.network.nxos.facts.ospf_interfaces.ospf_interfaces import (
     Ospf_interfacesFacts,
 )
+from ansible_collections.cisco.nxos.plugins.module_utils.network.nxos.facts.bgp_global.bgp_global import (
+    Bgp_globalFacts,
+)
+from ansible_collections.cisco.nxos.plugins.module_utils.network.nxos.facts.bgp_address_family.bgp_address_family import (
+    Bgp_address_familyFacts,
+)
+from ansible_collections.cisco.nxos.plugins.module_utils.network.nxos.facts.bgp_neighbor_address_family.bgp_neighbor_address_family import (
+    Bgp_neighbor_address_familyFacts,
+)
 
 
 FACT_LEGACY_SUBSETS = dict(
@@ -105,6 +114,9 @@ FACT_RESOURCE_SUBSETS = dict(
     ospfv2=Ospfv2Facts,
     ospfv3=Ospfv3Facts,
     ospf_interfaces=Ospf_interfacesFacts,
+    bgp_global=Bgp_globalFacts,
+    bgp_address_family=Bgp_address_familyFacts,
+    bgp_neighbor_address_family=Bgp_neighbor_address_familyFacts,
 )
 
 

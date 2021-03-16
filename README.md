@@ -12,7 +12,7 @@ This collection has been tested against Cisco NX-OS 7.0(3)I5(1) on Nexus Switche
 <!--start requires_ansible-->
 ## Ansible version compatibility
 
-This collection has been tested against following Ansible versions: **>=2.9.10,<2.11**.
+This collection has been tested against following Ansible versions: **>=2.9.10**.
 
 Plugins and modules within a collection may be tested with only specific Ansible versions.
 A collection may contain metadata that identifies these versions.
@@ -46,13 +46,16 @@ Name | Description
 [cisco.nxos.nxos_banner](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_banner_module.rst)|Manage multiline banners on Cisco NXOS devices
 [cisco.nxos.nxos_bfd_global](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bfd_global_module.rst)|Bidirectional Forwarding Detection (BFD) global-level configuration
 [cisco.nxos.nxos_bfd_interfaces](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bfd_interfaces_module.rst)|BFD interfaces resource module
-[cisco.nxos.nxos_bgp](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_module.rst)|Manages BGP configuration.
-[cisco.nxos.nxos_bgp_af](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_af_module.rst)|Manages BGP Address-family configuration.
-[cisco.nxos.nxos_bgp_neighbor](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_neighbor_module.rst)|Manages BGP neighbors configurations.
-[cisco.nxos.nxos_bgp_neighbor_af](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_neighbor_af_module.rst)|Manages BGP address-family's neighbors configuration.
+[cisco.nxos.nxos_bgp](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_module.rst)|(deprecated, removed after 2023-01-27) Manages BGP configuration.
+[cisco.nxos.nxos_bgp_address_family](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_address_family_module.rst)|BGP Address Family resource module.
+[cisco.nxos.nxos_bgp_af](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_af_module.rst)|(deprecated, removed after 2023-02-24) Manages BGP Address-family configuration.
+[cisco.nxos.nxos_bgp_global](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_global_module.rst)|BGP Global resource module.
+[cisco.nxos.nxos_bgp_neighbor](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_neighbor_module.rst)|(deprecated, removed after 2023-01-27) Manages BGP neighbors configurations.
+[cisco.nxos.nxos_bgp_neighbor_address_family](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_neighbor_address_family_module.rst)|BGP Neighbor Address Family resource module.
+[cisco.nxos.nxos_bgp_neighbor_af](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_bgp_neighbor_af_module.rst)|(deprecated, removed after 2023-02-24) Manages BGP address-family's neighbors configuration.
 [cisco.nxos.nxos_command](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_command_module.rst)|Run arbitrary command on Cisco NXOS devices
 [cisco.nxos.nxos_config](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_config_module.rst)|Manage Cisco NXOS configuration sections
-[cisco.nxos.nxos_devicealias](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_devicealias_module.rst)|Configuration of device alias.
+[cisco.nxos.nxos_devicealias](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_devicealias_module.rst)|Configuration of device alias for Cisco NXOS MDS Switches.
 [cisco.nxos.nxos_evpn_global](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_evpn_global_module.rst)|Handles the EVPN control plane for VXLAN.
 [cisco.nxos.nxos_evpn_vni](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_evpn_vni_module.rst)|Manages Cisco EVPN VXLAN Network Identifier (VNI).
 [cisco.nxos.nxos_facts](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_facts_module.rst)|Gets facts about NX-OS switches
@@ -121,13 +124,13 @@ Name | Description
 [cisco.nxos.nxos_vrf_af](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vrf_af_module.rst)|Manages VRF AF.
 [cisco.nxos.nxos_vrf_interface](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vrf_interface_module.rst)|Manages interface specific VRF configuration.
 [cisco.nxos.nxos_vrrp](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vrrp_module.rst)|Manages VRRP configuration on NX-OS switches.
-[cisco.nxos.nxos_vsan](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vsan_module.rst)|Configuration of vsan.
+[cisco.nxos.nxos_vsan](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vsan_module.rst)|Configuration of vsan for Cisco NXOS MDS Switches.
 [cisco.nxos.nxos_vtp_domain](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vtp_domain_module.rst)|Manages VTP domain configuration.
 [cisco.nxos.nxos_vtp_password](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vtp_password_module.rst)|Manages VTP password configuration.
 [cisco.nxos.nxos_vtp_version](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vtp_version_module.rst)|Manages VTP version configuration.
 [cisco.nxos.nxos_vxlan_vtep](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vxlan_vtep_module.rst)|Manages VXLAN Network Virtualization Endpoint (NVE).
 [cisco.nxos.nxos_vxlan_vtep_vni](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_vxlan_vtep_vni_module.rst)|Creates a Virtual Network Identifier member (VNI)
-[cisco.nxos.nxos_zone_zoneset](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_zone_zoneset_module.rst)|Configuration of zone/zoneset.
+[cisco.nxos.nxos_zone_zoneset](https://github.com/ansible-collections/nxos/blob/main/docs/cisco.nxos.nxos_zone_zoneset_module.rst)|Configuration of zone/zoneset for Cisco NXOS MDS Switches.
 
 <!--end collection content-->
 

@@ -33,9 +33,6 @@ class AclsArgs(object):  # pylint: disable=R0903
     """The arg spec for the nxos_acls module
     """
 
-    def __init__(self, **kwargs):
-        pass
-
     argument_spec = {
         "config": {
             "elements": "dict",
@@ -132,6 +129,9 @@ class AclsArgs(object):  # pylint: disable=R0903
                                                 },
                                                 "echo": {"type": "bool"},
                                                 "echo_reply": {"type": "bool"},
+                                                "echo_request": {
+                                                    "type": "bool"
+                                                },
                                                 "general_parameter_problem": {
                                                     "type": "bool"
                                                 },
