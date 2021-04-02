@@ -122,9 +122,9 @@ class Static_routesFacts(object):
 
         # ethernet1/2/23
         iface = re.match(
-            r".* (Ethernet|loopback|mgmt|port\-channel)(\S*) .*", conf
+            r".* (Ethernet|loopback|mgmt|port\-channel|Vlan)(\S*) .*", conf
         )
-        i = ["Ethernet", "loopback", "mgmt", "port-channel"]
+        i = ["Ethernet", "loopback", "mgmt", "port-channel", "Vlan"]
         if iface and iface.group(1) in i:
             inner_dict["interface"] = (iface.group(1)) + (iface.group(2))
             conf = re.sub(inner_dict["interface"], "", conf)
@@ -219,7 +219,11 @@ class Static_routesFacts(object):
         global_dest_list = []
         if con:
             for conf in con:
-                if conf.startswith("vrf context"):
+                # Current nxos module does not support "ip route static bfd" commands
+                # rendering, skip
+                if conf.startswith("ip route static bfd"):
+                    continue
+                elif conf.startswith("vrf context"):
                     svrf = re.match(r"vrf context (\S+)\n", conf).group(1)
                     afi_list = []
                     af = []
