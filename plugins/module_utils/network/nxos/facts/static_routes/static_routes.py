@@ -122,9 +122,9 @@ class Static_routesFacts(object):
 
         # ethernet1/2/23
         iface = re.match(
-            r".* (Ethernet|loopback|mgmt|port\-channel)(\S*) .*", conf
+            r".* (Ethernet|loopback|mgmt|port\-channel|Vlan)(\S*) .*", conf
         )
-        i = ["Ethernet", "loopback", "mgmt", "port-channel"]
+        i = ["Ethernet", "loopback", "mgmt", "port-channel", "Vlan"]
         if iface and iface.group(1) in i:
             inner_dict["interface"] = (iface.group(1)) + (iface.group(2))
             conf = re.sub(inner_dict["interface"], "", conf)
